@@ -39,3 +39,7 @@ Cada tipo de ação vale um número de pontos, multiplicado pela quantidade (1 a
 | GET, POST | `/api/acoes` | Lista e registra ações |
 | GET, POST | `/api/campanhas` | Lista (com progresso) e cria campanhas |
 | GET | `/api/ranking` | Ranking de alunos e turmas, com resumo |
+
+## GitHub Pages
+
+O Pages só serve arquivos estáticos, então a pasta `public/` é publicada sem o servidor. Nesse caso o `model.js` detecta que não há API e usa `public/js/local.js`, que guarda os dados no `localStorage` do próprio navegador (cada visitante vê só os seus dados). As regras de pontuação de `local.js` espelham as de `src/models`.
